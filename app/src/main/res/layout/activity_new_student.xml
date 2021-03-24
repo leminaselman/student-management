@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/q"
+    tools:context=".NewStudentActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/picture"
+        android:src="@drawable/logo"
+        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+       android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_psychology_24"/>
+        <EditText
+            android:id="@+id/EdtIdentity"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Student Identity"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_person_24"/>
+        <EditText
+            android:id="@+id/EdtName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Username"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_emoji_flags_24"/>
+        <EditText
+            android:id="@+id/EdtBirth"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Nationality"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="1dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_alternate_email_24" />
+
+        <EditText
+            android:id="@+id/EdtEmail"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Email"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prefixe : "
+            android:textSize="27dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="checkButton"
+                android:text="Mrs" />
+
+            <RadioButton
+                android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="Mme" />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="Mr" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etat : "
+            android:textSize="27dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_one1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="checkButton1"
+                android:text="Public" />
+
+            <RadioButton
+                android:id="@+id/radio_two2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton1"
+                android:text="Private" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <!--button for saving data to room database-->
+    <Button
+        android:id="@+id/BtnSaveStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="Save your student"
+        android:textAllCaps="false" />
+
+</LinearLayout>

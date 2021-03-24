@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GFG Room Database</string>
+    <string name="name">Nom</string>
+    <string name="identity">Idetifiant</string>
+</resources>

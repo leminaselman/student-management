@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GFG Room Database</string>
+    <string-array name="prefixes">
+        <item>Mrs</item>
+        <item>Mme</item>
+        <item>Mr</item>
+    </string-array>
+    <string name="name">name</string>
+    <string name="identity">identity</string>
+</resources>
